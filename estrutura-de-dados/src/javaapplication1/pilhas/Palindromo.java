@@ -4,7 +4,10 @@
  */
 package javaapplication1.pilhas;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 
 /**
@@ -14,26 +17,19 @@ import java.util.Scanner;
 //()
 public class Palindromo {
     public static void main(String[] args) {
-   Scanner entrada = new Scanner (System.in);
-        System.out.println("Entre com uma palavra:");
-        String palavra = entrada.next();
-        char [] comparaction = new char [palavra.toCharArray().length]; 
-        int auxiliar =0;
-        for(int i = palavra.length() - 1; i>=0; i--){
-           
-                comparaction[auxiliar++]=palavra.charAt(i);
-            }
-       
-        String palavrafinal = new String (comparaction);
-       if(palavrafinal.equals(palavra)){
-           System.out.println("é um palindromo");
-       }
-       else{
-           System.out.println("não é um palindromo");
-       }
-        
-             
-      
-       }
+   Scanner entrada = new Scanner(System.in);
+    String palavra = entrada.next();
+    List <Character> palabra = palavra.chars().mapToObj((c -> (char) c)).collect(Collectors.toList());
+    Collections.reverse(palabra);
+    String palavrai = palabra.parallelStream().map(String::valueOf).collect(Collectors.joining());
+    
+    if(palavra.equals(palavrai)){
+        System.out.print("É um palindromo");
     }
+    else{
+        System.out.print("Não é um palindromo");
+    }
+    }
+
+}
 

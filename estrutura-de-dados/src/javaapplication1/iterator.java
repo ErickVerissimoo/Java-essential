@@ -22,7 +22,7 @@ public class iterator {
         hastNext qu retorna um booleano indicando se a estrutura contém ou 
         não próximo elemento, o método next que retorna o elemento, o método
         forEachRemaining que aceita um consumer na qual permite realizar uma 
-        ação para cada elemento e por fim o método remove que remove um elemento
+        ação para cadementoa el e por fim o método remove que remove um elemento
         */
         Iterator<String> iterar = lista.iterator();
         while (iterar.hasNext()) {

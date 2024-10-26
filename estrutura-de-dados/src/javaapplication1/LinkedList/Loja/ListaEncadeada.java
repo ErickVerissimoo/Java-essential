@@ -5,6 +5,7 @@
 package javaapplication1.LinkedList.Loja;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Vector;
 /**
  *
  * @author Erick
@@ -27,6 +28,7 @@ public class ListaEncadeada {
         long EndTime2 = System.nanoTime();
         long duraction2 = EndTime2 - Startime2;
         System.out.println(duraction2);
+        Vector<String> vetor = new Vector<>();
         
     }
 }

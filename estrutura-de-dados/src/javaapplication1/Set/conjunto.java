@@ -6,6 +6,7 @@ package javaapplication1.Set;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Arrays;
+import java.util.function.Consumer;
 /**
  *
  * @author Erick

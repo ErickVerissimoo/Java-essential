@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class lista {
     public static void main(String[] args) {
         long inicio1 = System.nanoTime();
-        List<Integer> listaligada = new LinkedList<Integer>(asList(1, 3, 5, 32, 21, 54, 23));
+        List<Integer> listaligada = new LinkedList<>(asList(1, 3, 5, 32, 21, 54, 23));
         System.out.println("\n\tLinkedLists:");
         listaligada.stream().forEach(System.out::println);
         System.out.println("-----------------------");
@@ -29,9 +29,11 @@ public class lista {
         array.stream().forEach(System.out::println);
         System.out.println("-----------------------");
         array.add(4, 321);
+    
         array.stream().forEach(System.out::println);
         long final2 = System.nanoTime();
         long resultado2 = inicio2 - final2;
         System.out.println(resultado2);
+        
     }
 }
